@@ -57,11 +57,11 @@ button.addEventListener("click", () => {
         registerform.animate (
             [
                 {
-                    top: "-110px",
+                    top: "-120px",
                 },
 
                 {
-                    top: "50px",
+                    top: "150px",
                 }
             ],
             {
@@ -72,11 +72,11 @@ button.addEventListener("click", () => {
         loginform.animate (
             [
                 {
-                    top: "-110px",
+                    top: "-120px",
                 },
 
                 {
-                    top: "200px",
+                    top: "300px",
                 }
             ],
             {

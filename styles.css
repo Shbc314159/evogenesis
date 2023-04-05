@@ -69,28 +69,32 @@ li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: gray;
     z-index: -1;
     opacity: 0;
 }
 
 #register-form {
     position: absolute;
-    top: -120px;
+    top: -155px;
     text-align: center;
-    width: 25%;
-    margin-left: 37.5%;
+    width: 30%;
+    margin-left: 36%;
     background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
 }
 
 #login-form {
     position: absolute;
-    top: -120px;
+    top: -155px;
     text-align: center;
-    width: 20%;
-    margin-left: 40%;
+    width: 30%;
+    margin-left: 35%;
     background-color: black;
     padding: 10px;
+    border: 5px solid white;
+    border-radius: 15px;
 }
 
 .register-form-element {
@@ -104,21 +108,11 @@ li a:hover {
     margin: 10px;
 }
 
-.js-navbar {
-    font-family: serif;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
+#login-button {
+    border-radius: 10px;
     border: none;
-    text-decoration: none;
-    background-color: black; 
-    position: absolute;
-    right: 0;
-}
-
-.js-navbar:hover {
-    background-color: gray;
-    color: black;
+    padding: 5px;
+    margin: 10px;
 }
 
 @keyframes sidetoside {
@@ -127,7 +121,6 @@ li a:hover {
     70% {margin-left: 67%;}
     100% {margin-left: 0%;}
 }
-
 
 #titleblog {
     font-size: 3vw;
@@ -247,7 +240,7 @@ li a:hover {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: width 2s ease-out;
-  }
+}
   
 .postdiv::-webkit-scrollbar-thumb {
 background-color: white;

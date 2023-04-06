@@ -16,6 +16,7 @@
       <link rel="icon" type="image/x-icon" href="Icon.ico">
 
       <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="navbar-stylesheet.css">
 
       <meta charset="UTF-8">
       <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
@@ -48,13 +49,17 @@
       </div>
       
       <div id="navbar">
-        <ul>
-          <li class="navbar-elements"><a href="index.html">Home</a></li>
-          <li class="navbar-elements"><a href="blog.html">Blog</a></li>
-          <li class="navbar-elements"><div id="sign-in"></div></li>
-          <li class="navbar-elements"><a href="simulation.html">EvoGenesis Simulation</a></li>
-          <li id="taskbarimagecontainer"><button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50"/></button></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <div id="dropdown">
+          <button id="dropbtn">Products
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div id="dropdown-content">
+            <a href="simulation.html">Evolution Simulation</a>
+          </div>
+        </div>
+        <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50"/></button>
       </div>
   
       <div id="todo-list">

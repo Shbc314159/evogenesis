@@ -19,7 +19,7 @@ body {
 
 #register-form {
     position: absolute;
-    top: -155px;
+    top: -175px;
     text-align: center;
     width: 30%;
     margin-left: 36%;
@@ -30,7 +30,7 @@ body {
 
 #login-form {
     position: absolute;
-    top: -155px;
+    top: -175px;
     text-align: center;
     width: 30%;
     margin-left: 35%;

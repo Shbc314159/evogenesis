@@ -71,3 +71,7 @@
     padding: none;
     float: right;
 }
+
+#taskbarimagebutton:hover {
+    cursor: pointer;
+}

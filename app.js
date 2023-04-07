@@ -2,7 +2,6 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const path = require('path');
 const http = require('http');
 
 const app = express();
@@ -73,6 +72,18 @@ app.post('/example/api/save', function(req, res) {
         } 
     });
 });
+
+app.post('/example/api/addmsg', function(req) {
+    const message = req.body.message;
+    const query = `INSERT INTO messages (message) VALUE (?)`
+
+    connection.query(query, [message], function(error) {
+        if (error) {
+            console.log(error);
+        }
+    });
+});
+
 
 const server = http.createServer(app);
 // Start server

@@ -5,7 +5,7 @@ const loginform = document.getElementById("login-form");
 
 button.addEventListener("click", () => {
     button.style.position = "fixed";
-  
+   
     button.animate(
       [
    
@@ -50,14 +50,14 @@ button.addEventListener("click", () => {
     );
 
     setTimeout(() => {
-        button.style.opacity = 0;
+        button.style.position = 'relative';
         formdiv.style.opacity = 1;
         formdiv.style.zIndex = 1000;
 
         registerform.animate (
             [
                 {
-                    top: "-175px",
+                    top: "-180px",
                 },
 
                 {
@@ -72,7 +72,7 @@ button.addEventListener("click", () => {
         loginform.animate (
             [
                 {
-                    top: "-175px",
+                    top: "-180px",
                 },
 
                 {

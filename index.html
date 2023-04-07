@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">  
     <head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPJ8DCJ6YV"></script>
       <script>
@@ -17,7 +17,7 @@
 
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="navbar-stylesheet.css">
-
+      
       <meta charset="UTF-8">
       <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
       <meta name="description" content="EvoGenesis Evolution Simulation information and download">
@@ -34,16 +34,18 @@
     <body>
       <div id="formsdiv">
           
-          <div id="register-form"> 
-            <h1 class="register-form-element">Register</h1>
-            <label class="register-form-element" for="email-input">Email: <input type="email" id="email-input-register" /> </label>
-            <button class="register-form-element" id="register-button">Register</button>
+          <div id="register-form" class="form"> 
+            <h1 class="form-element-h1">Register</h1>
+            <label for="email-input-register" class="form-element-label">Email: <input type="email" id="email-input-register" class="email-input" name="email-input-register"/> </label>
+            <br />
+            <button class="form-button" id="register-button">Register</button>
           </div>
     
-          <div id="login-form">
-            <h1 class="register-form-element">Login</h1>
-            <label class="register-form-element" for="email-input">Email: <input type="email" id="email-input-login" name="email-input-login"/> </label>
-            <button class="register-form-element" id="login-button">Login</button>
+          <div id="login-form" class="form">
+            <h1 class="form-element-h1">Login</h1>
+            <label for="email-input-login" class="form-element-label">Email: <input type="email" id="email-input-login" class="email-input" name="email-input-login"/> </label>
+            <br />
+            <button class="form-button" id="login-button">Login</button>
           </div>
           
       </div>
@@ -52,25 +54,39 @@
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
         <div id="dropdown">
-          <button id="dropbtn">Products
-            <i class="fa fa-caret-down"></i>
-          </button>
+          <button id="dropbtn">Products &#x25BC;</button>
           <div id="dropdown-content">
             <a href="simulation.html">Evolution Simulation</a>
           </div>
         </div>
         <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50"/></button>
       </div>
-  
-      <div id="todo-list">
-        <h1>Todo List</h1>
-        <ol id="todos"></ol>
-        <label for="new-todo-input">New Todo:</label>
-        <input type="text" id="new-todo-input" />
-        <button id="add-todo-button">Add</button>
-        <label for="remove-todo-input">Remove Todo:</label>
-        <input type="text" id="remove-todo-input" />
-        <button id="remove-todo-button">Remove</button>
+      
+      <div id="todo-chat-container">
+
+        <div id="todo-list">
+
+          <h1>Todo List</h1>
+          <ol id="todos"></ol>
+
+          <label for="new-todo-input">New Todo:</label>
+          <input type="text" id="new-todo-input" />
+          <button id="add-todo-button">Add</button>
+
+          <br />
+
+          <label for="remove-todo-input">Remove Todo:</label>
+          <input type="text" id="remove-todo-input" />
+          <button id="remove-todo-button">Remove</button>
+
+        </div>
+
+        <div id="chat">
+          <div id="messages"></div>
+          <input type="text" id="chatinput" />
+          <button id="chatinputbutton">Send</button>
+        </div>
+
       </div>
 
       <script src="script.js" type="text/babel"></script>

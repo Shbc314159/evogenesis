@@ -7,9 +7,17 @@ const newTodoInput = document.getElementById('new-todo-input');
 const addTodoButton = document.getElementById('add-todo-button');
 const removeTodoInput = document.getElementById('remove-todo-input');
 const removeTodoButton = document.getElementById('remove-todo-button');
+const formsdiv = document.getElementById("formsdiv");
+const loginform = document.getElementById("login-form");
+const registerform = document.getElementById("register-form")
+const messages = document.getElementById("messages");
+const chatbutton = document.getElementById("chatinputbutton");
+const chat = document.getElementById("chatinput");
 
-var currentuseremail;
+
+var currentuseremail; 
 var todolistdata;
+var signedin = False;
 
 // Register new user and save todo list to database
 registerButton.addEventListener('click', function() {
@@ -25,6 +33,11 @@ registerButton.addEventListener('click', function() {
   .catch(error => {
       alert("This username has already been taken. Please register with a different username.")
   })
+
+  if (!error) {
+    signedin = True;
+  }
+
 });
 
 
@@ -38,11 +51,19 @@ loginButton.addEventListener('click', function() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     })
+    .catch(error => {
+      alert("There is no account with that username")
+    })
     .then(response => response.json())
     .then(data => {
         todolistdata = JSON.parse(data.todo_list);
         displayTodoList(todolistdata);
     });
+
+    if (!error) {
+      signedin = True;
+    }
+
 });
 
 
@@ -76,7 +97,7 @@ addTodoButton.addEventListener('click', function() {
     body: JSON.stringify(data)
   });
   
-  addTodoInput.value = '';
+  newTodoInput.value = '';
 });
 
 
@@ -109,5 +130,35 @@ removeTodoButton.addEventListener('click', function() {
         removeTodoInput.value = '';
     }
 });
+
+registerform.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+loginform.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+formsdiv.addEventListener('click', function() {
+    formsdiv.style.zIndex = -1;
+    formsdiv.style.opacity = 0;
+    registerform.style.top = "-180px";
+    loginform.style.top = "-180px";
+});
+
+chatbutton.addEventListener('click', function() {
+    currentchat = chat.value;
+    data = { message: currentchat };
+
+    if (signedin == True) {
+      fetch('http://evogenesis.co.uk/example/api/addmsg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+    }
+
+    chat.value = '';
+})
 
 

@@ -10,14 +10,14 @@ const removeTodoButton = document.getElementById('remove-todo-button');
 const formsdiv = document.getElementById("formsdiv");
 const loginform = document.getElementById("login-form");
 const registerform = document.getElementById("register-form")
-const messages = document.getElementById("messages");
 const chatbutton = document.getElementById("chatinputbutton");
 const chat = document.getElementById("chatinput");
 
 
 var currentuseremail; 
 var todolistdata;
-var signedin = False;
+var signedin = false;
+var currentchat;
 
 // Register new user and save todo list to database
 registerButton.addEventListener('click', function() {
@@ -25,7 +25,7 @@ registerButton.addEventListener('click', function() {
   currentuseremail = email;
   const todoList = [];
   const data = { email: email, todoList: todoList };
-  fetch('http://evogenesis.co.uk/example/api/register', {
+  fetch('http://evogenesis.co.uk/myapp/api/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -34,9 +34,7 @@ registerButton.addEventListener('click', function() {
       alert("This username has already been taken. Please register with a different username.")
   })
 
-  if (!error) {
-    signedin = True;
-  }
+    signedin = true;
 
 });
 
@@ -46,7 +44,7 @@ loginButton.addEventListener('click', function() {
     currentuseremail = email;
     const data = { email: email };
     
-    fetch('http://evogenesis.co.uk/example/api/login', {
+    fetch('http://evogenesis.co.uk/myapp/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -60,9 +58,7 @@ loginButton.addEventListener('click', function() {
         displayTodoList(todolistdata);
     });
 
-    if (!error) {
-      signedin = True;
-    }
+    signedin = true;
 
 });
 
@@ -91,7 +87,7 @@ addTodoButton.addEventListener('click', function() {
   });
   
   const data = { email: email, todoList: todoListData };
-  fetch('http://evogenesis.co.uk/example/api/save', {
+  fetch('http://evogenesis.co.uk/myapp/api/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -117,10 +113,10 @@ removeTodoButton.addEventListener('click', function() {
         });
     
         const data = { email: email, todoList: todoListData };
-            fetch('http://evogenesis.co.uk/example/api/save', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
+        fetch('http://evogenesis.co.uk/myapp/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
         
         removeTodoInput.value = '';
@@ -148,17 +144,49 @@ formsdiv.addEventListener('click', function() {
 
 chatbutton.addEventListener('click', function() {
     currentchat = chat.value;
-    data = { message: currentchat };
+    const data = { email: currentuseremail, message: currentchat };
 
-    if (signedin == True) {
-      fetch('http://evogenesis.co.uk/example/api/addmsg', {
+    if (signedin == true) {
+      fetch('http://evogenesis.co.uk/myapp/api/addmsg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
+      })
+      .catch(error => {
+        console.log(error);
       });
     }
 
     chat.value = '';
 })
 
+window.onload = function() {
+  setInterval(function() {
+    fetch('http://evogenesis.co.uk/myapp/api/getmsgs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const messages = data.data;
+        ReactDOM.render(<ChatMessages messages={messages} />, document.getElementById('messages'));
+    });
+  }, 5000);
+}
 
+
+function ChatMessages(props) {
+  const { messages } = props;
+  const messagesArr = messages.map(({ username, message }) => [username, message]);
+
+  return (
+    <ul>
+      {messagesArr.map(([username, message], index) => (
+        <li key={index}>
+          <span>{username}: </span>
+          <span>{message}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}

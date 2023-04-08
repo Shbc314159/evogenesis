@@ -7,7 +7,7 @@ const http = require('http');
 const app = express();
 const port = 4000;
 
-// Create connection to MySQL database
+
 const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'evogenes_shbc',
@@ -15,13 +15,13 @@ const connection = mysql.createConnection({
   database: 'evogenes_Users'
 });
 
-// Use bodyParser middleware to parse JSON data
+
 app.use(bodyParser.json());
 
 app.use(cors())
 
 
-app.post('/example/api/login', function(req, res) {
+app.post('/myapp/api/login', function(req, res) {
     const email = req.body.email;
     const query = 'SELECT todo_list FROM users WHERE username=?';
     
@@ -40,8 +40,8 @@ app.post('/example/api/login', function(req, res) {
 });
 
 
-// Register new user and save todo list to database
-app.post('/example/api/register', function(req, res) {
+
+app.post('/myapp/api/register', function(req, res) {
     const email = req.body.email;
     const todoList = JSON.stringify(req.body.todoList);
     const query = `INSERT INTO users (username, todo_list) VALUES (?, ?)`;
@@ -58,7 +58,7 @@ app.post('/example/api/register', function(req, res) {
 });
 
 
-app.post('/example/api/save', function(req, res) {
+app.post('/myapp/api/save', function(req, res) {
     const email = req.body.email;
     const todoList = JSON.stringify(req.body.todoList);
     const query = `UPDATE users SET todo_list = ? WHERE username = ?`;
@@ -73,20 +73,34 @@ app.post('/example/api/save', function(req, res) {
     });
 });
 
-app.post('/example/api/addmsg', function(req) {
+app.post('/myapp/api/addmsg', function(req) {
     const message = req.body.message;
-    const query = `INSERT INTO messages (message) VALUE (?)`
+    const email = req.body.email;
+    const query = `INSERT INTO messages (username, message) VALUES (?, ?)`
 
-    connection.query(query, [message], function(error) {
+    connection.query(query, [email, message], function(error) {
         if (error) {
             console.log(error);
         }
     });
 });
 
+app.post('/myapp/api/getmsgs', function(req, res) {
+    const query =  `SELECT * FROM messages`
+
+    connection.query(query, function(error, result) {
+        if (error) {
+            console.log(error);
+        } else {
+            res.status(200).json({ data: result });
+            return;
+        }
+    })
+})
+
 
 const server = http.createServer(app);
-// Start server
+
 server.listen(port, function() {
   console.log(`Server listening on port ${port}`);
 });

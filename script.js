@@ -143,8 +143,8 @@ loginform.addEventListener('click', function(event) {
 formsdiv.addEventListener('click', function() {
     formsdiv.style.zIndex = -1;
     formsdiv.style.opacity = 0;
-    registerform.style.top = "-180px";
-    loginform.style.top = "-180px";
+    registerform.style.opacity = 0;
+    loginform.style.opacity = 0;
 });
 
 

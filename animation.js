@@ -57,35 +57,35 @@ button.addEventListener("click", () => {
         registerform.animate (
             [
                 {
-                    top: "-180px",
+                    opacity: 0,
                 },
 
                 {
-                    top: "50px",
+                    opacity: 1,
                 }
             ],
             {
-                duration: 1000,
+                duration: 1500,
             }
         );
 
         loginform.animate (
             [
                 {
-                    top: "-180px",
+                    opacity: 0,
                 },
 
                 {
-                    top: "300px",
+                    opacity: 1,
                 }
             ],
             {
-                duration: 1000,
+                duration: 1500,
             }
         );
 
-        registerform.style.top = "50px";
-        loginform.style.top = "300px";
+        registerform.style.opacity = 1;
+        loginform.style.opacity = 1;
 
     }, 2500);
 });

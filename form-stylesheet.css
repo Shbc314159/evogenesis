@@ -16,13 +16,24 @@
 
 .form {
     position: absolute;
-    top: -180px;
     text-align: center;
     width: 30%;
     background-color: black;
     border: 5px solid white;
     border-radius: 15px;
+    height: 20%;
 }
+
+#register-form {
+    top: 22%;
+    opacity: 0
+}
+
+#login-form {
+    top: 52%;
+    opacity: 0;
+}
+
 
 .form-element-h1 {
     font-family: 'Bebas Neue';

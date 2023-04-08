@@ -15,7 +15,8 @@
         <title>EvoGenesis</title>
         <link rel="icon" type="image/x-icon" href="Icon.ico">
 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="simulation_style.css">
+        <link rel="stylesheet" href="navbar-stylesheet.css">
 
         <meta charset="UTF-8">
         <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
@@ -30,13 +31,18 @@
         crossorigin="anonymous"></script>
     </head>
     <body>
+        
         <div id="navbar">
-            <ul>
-              <li class="navbar-elements"><a href="http://localhost/website folder/index.html">Home</a></li>
-              <li class="navbar-elements"><a href="http://localhost/website folder/blog.html">Blog</a></li>
-              <li class="navbar-elements"><a href="http://localhost/website folder/simulation.html">EvoGenesis Simulation</a></li>
-              <li id="taskbarimagecontainer"><button id="taskbarimagebutton"><image src="http://localhost/website folder/Icon.ico" alt="Icon" id="taskbarimage" height="50"/></image></button></li>
-            </ul>
+            <a href="index.html" class="navbar-elements">Home</a>
+            <a href="blog.html" class="navbar-elements">Blog</a>
+            <div id="dropdown">
+                <button id="dropbtn">Products &#x25BC;</button>
+                <div id="dropdown-content">
+                    <a href="simulation.html">Evolution Simulation</a>
+                </div>
+            </div>
+            <h5 id="current-username" class="navbar-elements"></h5>
+            <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50" /></button>
         </div>
     
         <a href="mysetup.exe">Download Installer</a>

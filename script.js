@@ -12,6 +12,7 @@ const loginform = document.getElementById("login-form");
 const registerform = document.getElementById("register-form")
 const chatbutton = document.getElementById("chatinputbutton");
 const chat = document.getElementById("chatinput");
+const current_uname = document.getElementById("current-username");
 
 
 var currentuseremail; 
@@ -35,6 +36,7 @@ registerButton.addEventListener('click', function() {
   })
 
     signedin = true;
+    current_uname.innerHTML = currentuseremail;
 
 });
 
@@ -59,6 +61,8 @@ loginButton.addEventListener('click', function() {
     });
 
     signedin = true;
+    current_uname.innerHTML = currentuseremail;
+    console.log(currentuseremail);
 
 });
 
@@ -180,11 +184,14 @@ function ChatMessages(props) {
   const messagesArr = messages.map(({ username, message }) => [username, message]);
 
   return (
-    <ul>
+    <ul id="chatlist">
       {messagesArr.map(([username, message], index) => (
         <li key={index}>
-          <span>{username}: </span>
-          <span>{message}</span>
+          <span id="username-chat">{username} </span>
+          <br />
+          <span id="message-chat">{message}</span>
+          <br />
+          <br />
         </li>
       ))}
     </ul>

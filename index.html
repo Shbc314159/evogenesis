@@ -51,14 +51,15 @@
       </div>
       
       <div id="navbar">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="index.html" class="navbar-elements">Home</a>
+        <a href="blog.html" class="navbar-elements">Blog</a>
         <div id="dropdown">
           <button id="dropbtn">Products &#x25BC;</button>
           <div id="dropdown-content">
             <a href="simulation.html">Evolution Simulation</a>
           </div>
         </div>
+        <h5 id="current-username" class="navbar-elements"></h5>
         <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50"/></button>
       </div>
       
@@ -82,6 +83,7 @@
         </div>
 
         <div id="chat">
+          <h1 id="chat-title">Chat</h1>
           <div id="messages"></div>
           <input type="text" id="chatinput" />
           <button id="chatinputbutton">Send</button>

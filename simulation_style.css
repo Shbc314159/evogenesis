@@ -1,4 +1,17 @@
 body {
     background-color: #303134;
     margin: 0;
+    color: white;
+}
+
+#download-button {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: turquoise;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 45%;
+    width: 10%;
 }

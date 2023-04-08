@@ -131,6 +131,7 @@ removeTodoButton.addEventListener('click', function() {
     }
 });
 
+
 registerform.addEventListener('click', function(event) {
     event.stopPropagation();
 });
@@ -145,6 +146,7 @@ formsdiv.addEventListener('click', function() {
     registerform.style.top = "-180px";
     loginform.style.top = "-180px";
 });
+
 
 chatbutton.addEventListener('click', function() {
     currentchat = chat.value;
@@ -197,3 +199,4 @@ function ChatMessages(props) {
     </ul>
   );
 }
+

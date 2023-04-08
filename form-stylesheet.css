@@ -1,0 +1,63 @@
+#formsdiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #303134;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.form {
+    position: absolute;
+    top: -180px;
+    text-align: center;
+    width: 30%;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+.form-element-h1 {
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.1em;
+    margin: 15px 0 5px 0;
+}
+
+.form-element-label {
+    font-family: 'Open Sans'
+}
+
+.email-input {
+    border-radius: 10px;
+    height: 20px;
+    margin: 10px;
+    width: 25%;
+    transition: width 1s ease-in-out;
+}
+
+.email-input:focus {
+    width: 70%;
+}
+
+.form-button {
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    background-color: rgb(68, 81, 92);
+}
+
+.form-button:hover {
+    cursor: pointer
+}

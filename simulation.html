@@ -1,98 +1,496 @@
 <?DOCTYPE html>
 <html lang="en">
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPJ8DCJ6YV"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WPJ8DCJ6YV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag('config', 'G-WPJ8DCJ6YV');
-        </script>
+      gtag("config", "G-WPJ8DCJ6YV");
+    </script>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <title>EvoGenesis</title>
-        <link rel="icon" type="image/x-icon" href="Icon.ico">
+    <title>EvoGenesis</title>
+    <link rel="icon" type="image/x-icon" href="Icon.ico" />
 
-        <link rel="stylesheet" href="simulation_style.css">
-        <link rel="stylesheet" href="navbar-stylesheet.css">
+    <link rel="stylesheet" href="simulation_style.css" />
+    <link rel="stylesheet" href="navbar-stylesheet.css" />
 
-        <meta charset="UTF-8">
-        <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
-        <meta name="description" content="EvoGenesis Evolution Simulation information and download">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS"
+    />
+    <meta
+      name="description"
+      content="EvoGenesis Evolution Simulation information and download"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9825750258636586"
-        crossorigin="anonymous"></script>
-    </head>
-    <body>
-        
-        <div id="navbar">
-            <a href="index.html" class="navbar-elements">Home</a>
-            <a href="blog.html" class="navbar-elements">Blog</a>
-            <div id="dropdown">
-                <button id="dropbtn">Products &#x25BC;</button>
-                <div id="dropdown-content">
-                    <a href="simulation.html">Evolution Simulation</a>
-                </div>
-            </div>
-            <a href="mysetup.exe" id="download-button">Download Evolution Simulator</a>
-            <h5 id="current-username" class="navbar-elements"></h5>
-            <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50" /></button>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9825750258636586"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="index.html" class="navbar-elements">Home</a>
+      <a href="blog.html" class="navbar-elements">Blog</a>
+      <div id="dropdown">
+        <button id="dropbtn">Products &#x25BC;</button>
+        <div id="dropdown-content">
+          <a href="simulation.html">Evolution Simulation</a>
         </div>
-        
-        <br />
-        <br />
+      </div>
+      <a href="mysetup.exe" class="navbar-elements" id="download-button"
+        >Download Evolution Simulator</a
+      >
+      <h5 id="current-username"></h5>
+      <button id="taskbarimagebutton">
+        <img src="Icon.ico" alt="Icon" id="taskbarimage" height="50" />
+      </button>
+    </div>
 
-        <div id="container">
-            <div id="videos1">
-                <video class="video" autoplay loop>
-                    <source src="Single Amoeba.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+    <br />
+    <br />
 
-                <video class="video" autoplay loop>
-                    <source src="Color + Reproduction.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <div id="graph-video-container">
-                    <video class="video" id="graph-video" autoplay loop>
-                        <source src="Graph.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            
-            <div id="text">
-                <h1>Development</h1>
-
-                <p>It all started with an idea</p>
-            </div>
-
-            <div id="videos2">
-                <video class="video" autoplay loop>
-                    <source src="Multiple Amoebas.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <video class="video" autoplay loop>
-                    <source src="Plants.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-            </div>
-
-        </div>
-
-        <video class="video" id="full-video" autoplay loop>
-            <source src="Full.mp4" type="video/mp4">
+    <div class="container">
+      <div id="videos1">
+        <figure>
+          <video class="video" autoplay loop>
+            <source src="Single Amoeba.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-        </video>
-    </body>
+          </video>
+          <figcaption><i>Figure 1: The First Amoeba</i></figcaption>
+        </figure>
+
+        <figure>
+          <video class="video" autoplay loop>
+            <source src="Color + Reproduction.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption><i>Figure 3: Evolving Amoebae</i></figcaption>
+        </figure>
+
+        <figure>
+          <video class="video" autoplay loop>
+            <source src="Plants.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption><i>Figure 5: A Fragile Ecosystem</i></figcaption>
+        </figure>
+      </div>
+
+      <div id="text">
+        <h1 id="title-dev">Development</h1>
+
+        <p class="dev-text">
+          The idea started with a tutorial. During a Computer Science class, I
+          had just finished learning about Python OOP and I decided to create a
+          game. Thanks to this tutorial:
+          <a href="https://realpython.com/pygame-a-primer/"
+            >A Primer on Pygame</a
+          >, I was quickly able to recreate Figure 1. But instead of trying to
+          then create a platformer, I was struck by how lifelike the
+          <a href="https://docs.python.org/3/library/random.html">random</a>
+          movement looked.
+        </p>
+        <br />
+        <p class="dev-text">
+          This then reminded me of amoebae (we had been studying microorganisms
+          in Biology) and somehow I then had the idea of simulating their
+          evolution. I then added a for loop to the code to create a whole host
+          of
+          <a href="https://www.grammar-monster.com/plurals/plural_of_amoeba.htm"
+            >amoebae</a
+          >
+          (see Figure 2).
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          The next task seemed complex but was ultimately simple: to make the
+          amoebae evolve. After trying to implement a gene-based structure
+          modelled on actual DNA, I opted for a value passed down from parent to
+          child. This value would be the amoebae's maturing speed. In order for
+          two amoebas to reproduce, they must both have a 'maturity' above a
+          certain value, which was incremented every 'second' of their lives.
+          Those with higher maturing speeds would attain the necessary maturity
+          faster. To prevent the amoebae reproducing extremely quickly and
+          crashing my computer, I first had to implement an age attribute that
+          would, like maturity, increment each second and then kill any amoebae
+          older than a certain value. I also reset the maturity of each amoeba
+          after they reproduced.
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          To allow evolution to be visualised more easily, I set each amoeba's
+          color to their maturing speed: the darker they were, the lower their
+          maturing speed (Figure 3). However, this proved to be an inadequate
+          method so I opted for a graph-based approach insted.
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          Implementing the graph, like many steps of the process, was
+          surprisingly simple and easily one of the most satisfying parts of the
+          process. However, I then made the ill-fated mistake of trying to work
+          out an equation for the changing maturing speed of the amoebae. There
+          were two issues with this: not only were there five central variables
+          (mutation constant, death age, maturing age, speed and maximum
+          population), the entire process was inherently random.
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          Now, the project seemed finished. I'd done what I set out to do -
+          simulate evolution. But I wanted this to become slightly more
+          realistic, so I thought I'd add in plants. This added a lot more
+          complexity to the program, both in terms of the actual code and the
+          fragility of the system. Nine times out of ten, either the amoebeae
+          would die off or the plants would (and since the amoebae fed off them,
+          they died too). There were also far more constants to tinker with.
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          After trying to find some set of constants that would create a
+          balance, I realised that again, due to the inherent complexity and
+          randomness of the program, some degree of user control would be
+          necessary. And actually, this wouldn't be such a bad thing. After all,
+          if this was to be used as a learning resource, surely it would be much
+          more effective if it were an actively used one?
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          And so I set out on the most time-consuming aspect of all: the GUI.
+        </p>
+
+        <br />
+
+        <p class="dev-text">
+          Without going into the details, this was essentially complicated
+          because I had to creae a mechanism by which both the simulation and
+          the graphs could be drawn onto a separate window whilst losing as
+          little performance as possible. And of <i>course</i> pygame (which I
+          used for the simulation) would be incompatible with tkinter (which I
+          used for the GUI). Once that was finished, I added some user controls
+          and spruced it up a bit. The original tkinter module looks like it
+          dropped out of the 1980s so some modification was necessary.
+        </p>
+
+        <br />
+
+        <p class="dev-text">And so this is it!</p>
+      </div>
+
+      <div id="videos2">
+        <figure id="multiple-amoebas-fig">
+          <video class="video" autoplay loop>
+            <source src="Multiple Amoebas.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption><i>Figure 2: Multiple Amoebas</i></figcaption>
+        </figure>
+
+        <figure>
+          <div id="graph-video-container">
+            <video class="video" id="graph-video" autoplay loop>
+              <source src="Graph.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <br />
+          <figcaption><i>Figure 4: A graphical visualisation</i></figcaption>
+        </figure>
+
+        <div id="extra-notes">
+          <h1>Notate Bene</h1>
+
+          <p>
+            Just a couple of extra notes about the making of this.
+            <br />
+            <br />
+            Firstly, I said several times that many of these features were
+            surprisingly quick to implement. The reason, therefore, why this
+            project was very time consuming, was that optimisation and debugging
+            took up approximately 70-80% of the time I spent on this project.
+            This is because I was mostly teaching myself all of this material
+            (pygame, tkinter) as I went along and also because as soon as I
+            added the GUI the project started ballooning in size.
+          </p>
+
+          <br />
+
+          <p>
+            Also a further note about the fragility of the ecosystem. The irony
+            that a simulation of evolution, which is the mechanism by which
+            ecosystems survive in changing conditions, is not lost on me.
+            Unfortunately when this idea came to mind I rejected it and later
+            the project became too convoluted to risk attempting it.
+            <br />
+            <br />
+
+            I did concieve of how this would work, however.
+            <br />
+            <br />
+            Firstly, each amoeba would have a 'genes' attribute, which would be
+            a long string of bases. Upon their birth, this string would be
+            parsed by a function and then based on the results their phenotype
+            (attributes like their speed, death age etc) would be created. When
+            they reproduced, their child's genes would be created by randomly
+            selecting bases from their genes and their mate's.
+            <br />
+            <br />
+            Now the issues. Ignoring the complexity of it, this model leaves no
+            room for the creation of new genes - a vital part of evolution.
+            Secondly, the parser would be difficult to create. In nature there
+            are many stages between the DNA sequence and the organism's
+            phenotype. Whils this model would be far simpler, it would also be
+            impossible for the same complexity of evolution to be replicated -
+            for example, the amoebae couldn't evolve into a completely different
+            species with different behaviours.
+            <br />
+            <br />
+            So although this model would be more accurate than my current
+            implementation, and the results would certainly be very interesting,
+            to create true evolution advanced deep learning would have to be
+            used. This would enable the species to actually create new genes
+            which have not been coded into it. This is an exciting concept but
+            perhaps a project for when my skills are more advanced.
+          </p>
+
+          <br />
+
+          <p>
+            In conclusion to this fairly lengthy tangent, I would like to say
+            this: we are taught that evolution is an explanation of how life on
+            Earth can have developed such complexity without a fantastical
+            degree of chance being needed. However, based on my (very small)
+            experience I would argue this is untrue: for every single minute new
+            development an organism not only was fortunate enough to mutate in a
+            beneficial way, it was also fortunate enough to be able to make use
+            of that. Perhaps an eye could evolve without a great degree of luck,
+            but it is absolutely useless without a brain. And how fortunate must
+            an organism to develop both of these seemingly useless appendages at
+            once! (Of course this is a very simple example, the topic has far
+            more nuance and there is a very good chance I am completely wrong
+            about this.)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <video class="video" id="full-video" autoplay loop>
+      <source src="Full.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+
+      <div id="code">
+        <pre>
+          <code>
+            import pygame 
+            import random
+            import time
+            import itertools
+            import matplotlib.pyplot as plt
+            import matplotlib.animation as animation
+            import numpy
+            import keyboard
+
+            from pygame.locals import (
+                QUIT
+            )
+
+            SCREEN_WIDTH = 500
+            SCREEN_HEIGHT = 500
+            MUTATION_CONSTANT = int(input("Please enter the desired mutation speed: "))
+            DEATH_AGE = 500
+            MATURING_AGE = 50
+            SPEED = 3
+            POPULATION = 100
+
+            global num_collisions
+            num_collisions = 0
+
+            pygame.init()   
+            screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
+            amoebas = pygame.sprite.Group()
+
+            class Amoeba(pygame.sprite.Sprite):
+                id_iter = itertools.count()
+
+                def __init__(self, maturing_speed, x, y):
+                    super().__init__()
+                    self.id = 'amoeba' + str(next(Amoeba.id_iter))
+                    self.surf = pygame.Surface((10, 10))
+                    self.maturing_speed = maturing_speed
+                    color = max(min(self.maturing_speed, 254), 1)
+                    self.surf.fill((color, 0, 0))
+                    self.rect = self.surf.get_rect(center=(x, y,))
+                    self.speed = SPEED
+                    self.maturity = 0
+                    self.age = 0
+                    
+
+                def update(self):
+                    if self.rect.left <= 0:
+                        direction = 1
+                    elif self.rect.right >= SCREEN_WIDTH:
+                        direction = 2
+                    elif self.rect.top <= 0:
+                        direction = 3
+                    elif self.rect.bottom >= SCREEN_HEIGHT:
+                        direction = 4
+                    else:
+                        direction = random.randint(1, 4)
+
+                    if direction == 1:
+                        self.rect.move_ip(self.speed, 0)
+                    elif direction == 2:
+                        self.rect.move_ip(-self.speed, 0)
+                    elif direction == 3:
+                        self.rect.move_ip(0, self.speed)
+                    elif direction == 4:
+                        self.rect.move_ip(0, -self.speed)
+                        
+                    if self.age >= DEATH_AGE:
+                        self.kill()
+
+                    self.age = self.age + 1
+
+                    self.maturity = self.maturity + (self.maturing_speed/125)
+
+                    if len(amoebas) > POPULATION:
+                        self.kill()
+
+                @classmethod
+                def collide(cls, num_collisions):
+                    for amoeba_1, amoeba_2 in itertools.combinations(amoebas, 2):
+                        if amoeba_1.maturity >= MATURING_AGE and amoeba_2.maturity >= MATURING_AGE and (
+                            pygame.sprite.collide_rect(amoeba_1, amoeba_2)
+                        ):
+                            amoeba_1.maturity = 1
+                            amoeba_2.maturity = 1
+
+                            location_x = amoeba_1.rect.left + random.randint(-10,20)
+                            location_y = amoeba_1.rect.top + random.randint(-10,20)
+                            
+                            speed_low = min(amoeba_1.maturing_speed, amoeba_2.maturing_speed) - MUTATION_CONSTANT
+                            speed_high = max(amoeba_1.maturing_speed, amoeba_2.maturing_speed) + MUTATION_CONSTANT
+
+                            new_maturing_speed = random.randint(speed_low, speed_high)
+                            
+                            amoebas.add(cls(new_maturing_speed, location_x, location_y))
+                            num_collisions += 5
+                            
+                    return num_collisions
+                
+
+            def main():
+                
+                plt.ion()
+
+                fig, ax = plt.subplots()
+
+                xpoints = []
+                ypoints1 = []
+                ypoints2 = []
+
+                line1, = ax.plot(xpoints, ypoints1, "-b", label="Average Maturing Speed")
+                line2, = ax.plot(xpoints, ypoints2, "-r", label="Reproduction rate (/100 seconds)")
+                ax.legend(loc="upper left")
+                
+                screen.fill((255, 255, 255))
+
+                for i in range(POPULATION):
+                    amoeba = Amoeba(random.randint(25, 50), random.randint(0, SCREEN_WIDTH), random.randint(0, SCREEN_HEIGHT))
+                    amoebas.add(amoeba)
+
+
+                step_counter = 0
+                total = 0
+                avg = 0
+                num_collisions = 0
+                
+                while True:    
+                    total = 0
+                    
+                    step_counter += 1
+
+                    for amoeba in amoebas:
+                        total = total + amoeba.maturing_speed
+
+                    if step_counter % 20 == 0:
+                        ypoints2.append(num_collisions)
+                        num_collisions = 0
+                    elif len(ypoints2) > 1:
+                        ypoints2.append(ypoints2[len(ypoints2) - 1])
+                    else:
+                        ypoints2.append(0)
+                        
+                    xpoints.append(step_counter)
+                    ypoints1.append(total/len(amoebas))
+
+                    avg = total/len(amoebas)
+
+                    line1.set_data(xpoints,ypoints1)
+                    line2.set_data(xpoints,ypoints2)
+                    ax.relim()
+                    ax.autoscale_view()
+                    fig.canvas.draw()
+                    fig.canvas.flush_events()
+                          
+                    if keyboard.is_pressed('q'):
+                        print(ypoints1[len(ypoints1)-1]/xpoints[len(xpoints)-1])
+                        
+                    screen.fill((255, 255, 255))
+
+                    amoebas.update()
+
+                    num_collisions = Amoeba.collide(num_collisions)
+
+                    for amoeba in amoebas:
+                        screen.blit(amoeba.surf, amoeba.rect)
+
+                    pygame.display.flip()
+
+                pygame.quit()
+
+
+            if __name__ == '__main__':
+                main()
+          </code>
+        </pre>
+      </div>
+
+      <div id="code-comments">
+
+      </div>
+
+    </div>
+
+  </body>
 </html>

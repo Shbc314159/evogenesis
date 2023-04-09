@@ -5,6 +5,8 @@
     background-color: black;
     margin: 0;
     padding: 0;
+    top: 0;
+    position: sticky;
 }
 
 .navbar-elements { 
@@ -15,31 +17,6 @@
     text-decoration: none;
     font-weight: 500;
     font-family: 'Orbitron';
-}
-
-#current-username {
-    padding: 15px;
-    margin: 0px;
-    margin-left: 60vw;
-    text-transform: uppercase;
-}
-
-#current-username:hover {
-    animation: rainbow 2s infinite;
-}
-
-@keyframes rainbow {
-    16.67% {
-        color: red;
-    }
-
-    50% {
-        color: blue;
-    }
-
-    83.33% {
-        color: green;
-    }
 }
 
 #dropdown {
@@ -60,7 +37,7 @@
 
 #dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -84,19 +61,43 @@
     display: block;
 }
 
-#taskbarimage {
+#current-username {
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 71.7vw;
+}
+
+#current-username:hover {
+    animation: rainbow 2s infinite;
+}
+
+#taskbarimagebutton {
+    float: right;
+    margin: 0;
     background-color: black;
     border: none;
     padding: none;
 }
 
-#taskbarimagebutton {
+#taskbarimage {
     background-color: black;
-    border: none;
-    padding: none;
-    float: right;
 }
 
 #taskbarimagebutton:hover {
     cursor: pointer;
+}
+
+@keyframes rainbow {
+    16.67% {
+        color: red;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    83.33% {
+        color: green;
+    }
 }

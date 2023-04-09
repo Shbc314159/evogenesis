@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 body {
     background-color: #303134;
     margin: 0;
@@ -5,30 +8,64 @@ body {
 }
 
 #download-button {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: turquoise;
-    padding: 15px;
+    background-color: #4fb8ff;
     border-radius: 10px;
-    margin-left: 45%;
-    width: 10%;
+    padding: 5px 15px;
+    margin-top: 9px;
 }
 
-#container {
-    margin-top: 100px;
+#download-button:hover {
+    animation: background-rainbow 3s infinite;
+}
+
+#current-username {
+    margin-left: 0vw !important;
+}
+
+.container {
+    margin-top: 50px;
     display: flex;
+}
+
+#text {
+    width: 33.3%;
+    background-color: #4fb8ff;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+#extra-notes {
+    background-color: black;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+    margin-top: 50px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#extra-notes h1 {
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
+#title-dev {
+    font-family: 'Fira Code';
+    text-decoration: underline;
+}
+
+.dev-text {
+    font-family: 'Source Code Pro';
+}
+
+figure {
     text-align: center;
 }
 
 #videos1 {
     width: 33.3%;
-}
-
-#text {
-    width: 33.3%;
-    background-color: green;
 }
 
 #videos2 {
@@ -44,7 +81,7 @@ body {
    overflow: hidden;
    width: 20vw; 
    height: 15vw;
-   padding-left: 6vw;
+   padding-left: 3.4vw;
 }
 
 #graph-video {
@@ -55,11 +92,36 @@ body {
 
 #full-video {
     padding: 0;
-    width: 80%;
+    width: 50%;
     border-style: solid;
     border-color: black;
-    border-width: 5px 25px 5px 25px;
-    margin-left: 10%;
+    border-width: 5px 15px 5px 15px;
+    margin-left: 25%;
     margin-top: 5%;
-    border-radius: 30px;
+    border-radius: 20px;
+}
+
+@keyframes background-rainbow {
+    16.67% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    83.33% {
+        background-color: green;
+    }
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: black;
+    margin-left: 0;
+    padding-left: 0;
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>EvoGenesis Blog</title>
+ 
+        <link rel="stylesheet" href="tutorial_style.css">
+        <link rel="stylesheet" href="navbar-stylesheet.css">
+
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
+        <meta name="description" content="EvoGenesis Evolution Simulation information and download">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        
+      <div id="navbar">
+        <a href="index.html" class="navbar-elements">Home</a>
+        <a href="tutorials.html" class="navbar-elements" id="current-page-navbar">Tutorials</a>
+        <div id="dropdown">
+          <button id="dropbtn">Products &#x25BC;</button>
+          <div id="dropdown-content">
+            <a href="simulation.html">Evolution Simulation</a>
+          </div>
+        </div>
+        <h5 id="current-username" class="navbar-elements"></h5>
+        <button id="taskbarimagebutton"><img src="Media/Icon.ico" alt="Icon" id="taskbarimage" height="50" /></button>
+      </div>
+
+      <div id="react-container"></div>
+ 
+      <script src="tutorial-script.js" type="text/babel"></script>
+      <script src="taskbarbutton.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <?DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
   <head>
     <script
       async
@@ -55,11 +55,12 @@
     ></script>
   </head>
   <body>
+
     <div id="navbar">
       <a href="index.html" class="navbar-elements">Home</a>
-      <a href="blog.html" class="navbar-elements">Blog</a>
+      <a href="tutorials.html" class="navbar-elements">Tutorials</a>
       <div id="dropdown">
-        <button id="dropbtn">Products &#x25BC;</button>
+        <button id="dropbtn-current-page">Products &#x25BC;</button>
         <div id="dropdown-content">
           <a href="simulation.html">Evolution Simulation</a>
         </div>
@@ -69,7 +70,7 @@
       >
       <h5 id="current-username"></h5>
       <button id="taskbarimagebutton">
-        <img src="Icon.ico" alt="Icon" id="taskbarimage" height="50" />
+        <img src="Media/Icon.ico" alt="Icon" id="taskbarimage" height="50" />
       </button>
     </div>
 
@@ -80,7 +81,7 @@
       <div id="demo">
         <div id="demo-video-container">
           <video id="demoVideo" width="100%" autoplay>
-            <source src="Full.mp4" type="video/mp4">
+            <source src="Media/Full.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -96,7 +97,7 @@
           <li>Fun and educational for all ages</li>
         </ul>
 
-        <a href="mysetup.exe" class="navbar-elements" id="download-button"
+        <a href="mysetup.exe" class="navbar-elements" id="download-button" style="margin-left: 25%"
         >Download Evolution Simulator</a
         >
       </div>
@@ -106,7 +107,7 @@
       <div id="videos1">
         <figure>
           <video class="video" autoplay loop>
-            <source src="Single Amoeba.mp4" type="video/mp4" />
+            <source src="Media/Single Amoeba.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption><i>Figure 1: The First Amoeba</i></figcaption>
@@ -114,7 +115,7 @@
 
         <figure>
           <video class="video" autoplay loop>
-            <source src="Color + Reproduction.mp4" type="video/mp4" />
+            <source src="Media/Color + Reproduction.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption><i>Figure 3: Evolving Amoebae</i></figcaption>
@@ -122,7 +123,7 @@
 
         <figure>
           <video class="video" autoplay loop>
-            <source src="Plants.mp4" type="video/mp4" />
+            <source src="Media/Plants.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption><i>Figure 5: A Fragile Ecosystem</i></figcaption>
@@ -250,7 +251,7 @@
       <div id="videos2">
         <figure id="multiple-amoebas-fig">
           <video class="video" autoplay loop>
-            <source src="Multiple Amoebas.mp4" type="video/mp4" />
+            <source src="Media/Multiple Amoebas.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption><i>Figure 2: Multiple Amoebas</i></figcaption>
@@ -259,7 +260,7 @@
         <figure>
           <div id="graph-video-container">
             <video class="video" id="graph-video" autoplay loop>
-              <source src="Graph.mp4" type="video/mp4" />
+              <source src="Media/Graph.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -343,7 +344,7 @@
     </div>
 
     <video class="video" id="full-video" autoplay loop>
-      <source src="Full.mp4" type="video/mp4" />
+      <source src="Media/Full.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
@@ -548,5 +549,7 @@
           </code>
         </pre>
     </div>
+
+    <script src="taskbarbutton.js" type="text/babel"></script>
   </body>
 </html>

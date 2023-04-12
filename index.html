@@ -1,99 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">  
-    <head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPJ8DCJ6YV"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WPJ8DCJ6YV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-WPJ8DCJ6YV');
-      </script>
+      gtag("config", "G-WPJ8DCJ6YV");
+    </script>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      <title>EvoGenesis</title>
-      <link rel="icon" type="image/x-icon" href="Icon.ico">
+    <title>EvoGenesis</title>
+    <link rel="icon" type="image/x-icon" href="Icon.ico" />
 
-      <link rel="stylesheet" href="styles.css">
-      <link rel="stylesheet" href="navbar-stylesheet.css">
-      <link rel="stylesheet" href="form-stylesheet.css">
-      
-      <meta charset="UTF-8">
-      <meta name="keywords" content="Evolution, Simulation, Genesis, Evogenesis, EvoGenesis, EVOGENESIS">
-      <meta name="description" content="EvoGenesis Evolution Simulation information and download">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar-stylesheet.css" />
+    <link rel="stylesheet" href="form-stylesheet.css" />
 
-      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="EvoGenesis, To Do List, Chat, Software, Open Source, Evolution, Simulation"
+    />
+    <meta
+      name="description"
+      content="EvoGenesis Evolution Simulation information and download"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9825750258636586"
-      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    </head>
-    <body>
-      <div id="formsdiv">
-          
-          <div id="register-form" class="form"> 
-            <h1 class="form-element-h1">Register</h1>
-            <label for="email-input-register" class="form-element-label">Email: <input type="email" id="email-input-register" class="email-input" name="email-input-register"/> </label>
-            <br />
-            <button class="form-button" id="register-button">Register</button>
-          </div>
-    
-          <div id="login-form" class="form">
-            <h1 class="form-element-h1">Login</h1>
-            <label for="email-input-login" class="form-element-label">Email: <input type="email" id="email-input-login" class="email-input" name="email-input-login"/> </label>
-            <br />
-            <button class="form-button" id="login-button">Login</button>
-          </div>
-          
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9825750258636586"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="formsdiv">
+      <div id="register-form" class="form">
+        <h1 class="form-element-h1">Register</h1>
+        <label for="email-input-register" class="form-element-label"
+          >Email:
+          <input
+            type="email"
+            id="email-input-register"
+            class="email-input"
+            name="email-input-register"
+          />
+        </label>
+        <br />
+        <button class="form-button" id="register-button">Register</button>
       </div>
-      
-      <div id="navbar">
-        <a href="index.html" class="navbar-elements">Home</a>
-        <a href="blog.html" class="navbar-elements">Blog</a>
-        <div id="dropdown">
-          <button id="dropbtn">Products &#x25BC;</button>
-          <div id="dropdown-content">
-            <a href="simulation.html">Evolution Simulation</a>
-          </div>
+
+      <div id="login-form" class="form">
+        <h1 class="form-element-h1">Login</h1>
+        <label for="email-input-login" class="form-element-label"
+          >Email:
+          <input
+            type="email"
+            id="email-input-login"
+            class="email-input"
+            name="email-input-login"
+          />
+        </label>
+        <br />
+        <button class="form-button" id="login-button">Login</button>
+      </div>
+    </div>
+
+    <div id="navbar">
+      <a href="index.html" class="navbar-elements" id="current-page-navbar">Home</a>
+      <a href="tutorials.html" class="navbar-elements">Tutorials</a>
+      <div id="dropdown">
+        <button id="dropbtn">Products &#x25BC;</button>
+        <div id="dropdown-content">
+          <a href="simulation.html">Evolution Simulation</a>
         </div>
+      </div>
+      <div id="imagediv">
         <h5 id="current-username" class="navbar-elements"></h5>
-        <button id="taskbarimagebutton"><img src="Icon.ico" alt="Icon" id="taskbarimage" height="50"/></button>
+        <p id="sign-in-pointer" class="navbar-elements">Sign in ►</p>
+        <button id="taskbarimagebutton">
+          <img src="Media/Icon.ico" alt="Icon" id="taskbarimage" height="50" />
+        </button>
       </div>
-      
-      <div id="todo-chat-container">
+    </div>
 
-        <div id="todo-list">
+    <div class="container">
+      <div id="todo-list">
+        <h1 id="todolisttitle">To Do List</h1>
+        <ul id="todos"></ul>
 
-          <h1>Todo List</h1>
-          <ol id="todos"></ol>
+        <label for="new-todo-input" id="new-todo-label">New Todo:</label>
+        <br />
+        <input type="text" id="new-todo-input" />
+        <button id="add-todo-button">Add</button>
 
-          <label for="new-todo-input">New Todo:</label>
-          <input type="text" id="new-todo-input" />
-          <button id="add-todo-button">Add</button>
+        <br />
 
-          <br />
-
-          <label for="remove-todo-input">Remove Todo:</label>
-          <input type="text" id="remove-todo-input" />
-          <button id="remove-todo-button">Remove</button>
-
-        </div>
-
-        <div id="chat">
-          <h1 id="chat-title">Chat</h1>
-          <div id="messages"></div>
-          <input type="text" id="chatinput" />
-          <button id="chatinputbutton">Send</button>
-        </div>
-
+        <label for="remove-todo-input" id="remove-todo-label"
+          >Remove Todo:</label
+        >
+        <br />
+        <input type="text" id="remove-todo-input" />
+        <button id="remove-todo-button">Remove</button>
       </div>
 
-      <script src="script.js" type="text/babel"></script>
-      <script src="animation.js" type="text/babel"></script>
+      <div id="main">
+        <div id="text">
+          <p>
+            Welcome to the website of Evogenesis Software! Here you'll find a
+            collection of software projects that we've created, all available
+            for download. Our current flagship project is an Evolution
+            Simulation we've created using
+            <a href="https://www.python.org/">Python</a>. This simulation
+            demonstrates the principles of natural selection and evolution, and
+            allows you to experiment with different variables to see how they
+            affect the evolution of the creatures in the simulation. Coming soon
+            is a physics simulation that demonstrates friction and gravity. This
+            simulation is great for students or anyone interested in learning
+            more about physics and how it works. If you have any comments about
+            any of our projects, just let us know in this chat section to the
+            right and one of our developers will help you out.
 
-    </body>
+            <br />
+            <br />
+
+            To use our chat and to do list functions, make sure to login or
+            register by clicking on the icon in the top right. We're afraid this
+            service is currently only available on the home page but we will be
+            extending it soon. Our database is protected through various
+            validation and verification techniques so to ensure that your
+            security is protected.
+
+            <br />
+            <br />
+
+            Take a look around and see what catches your eye. You'll find
+            detailed descriptions of each project, along with screenshots and
+            videos to give you a better idea of how they work. And if you have
+            any questions or issues, you can always check out the GitHub
+            repository for each project.
+
+            <br />
+            <br />
+
+            Ready to get started? Just click on the "Download Now" button for
+            the project you're interested in, and an installer for it will begin
+            downloading. All of my projects are completely free and open source,
+            so you can use them however you like. Thank you for visiting our
+            website, and we hope you find something here that you find useful
+            and enjoyable!
+          </p>
+        </div>
+        <div class="container" id="container-contact-img">
+          <div id="contact-info">
+            <h1>Contact Information</h1>
+            <p>
+              <img src="Media/github-icon.png" class="icon"></img>
+              <a href="https://github.com/Shbc314159">Github</a>
+            </p>
+            <p>
+              <img src="Media/stackoverflow-icon.png" class="icon"></img>
+              <a href="https://stackoverflow.com/users/21315126"
+                >Stack Overflow</a
+              >
+            </p>
+            <p>
+              <img src="Media/email-icon.png" class="icon"></img>
+              Email: <a href="mailto:shbc99@gmail.com">shbc99@gmail.com</a>
+            </p>
+            <p>
+              <img src="Media/phone-icon.png" class="icon"></img>
+              Phone: +44 7724 254 357
+            </p>
+          </div>
+          <div id="logo-div">
+            <img src="Media/Logo.png" id="logoimg"></img>
+          </div>
+        </div>
+      </div>
+
+      <div id="chat">
+        <h1 id="chat-title">Chat</h1>
+        <div id="messages"></div>
+        <input type="text" id="chatinput" />
+        <button id="chatinputbutton">Send</button>
+      </div>
+    </div>
+
+    <script src="script.js" type="text/babel"></script>
+    <script src="animation.js" type="text/babel"></script>
+  </body>
 </html>

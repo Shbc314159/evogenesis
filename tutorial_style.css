@@ -1,0 +1,40 @@
+body {
+    background-color: #303134;
+    margin: 0;
+}
+
+#tutorial-container-div {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    border-radius: 20px;
+    height: 300px;
+    border: 5px solid darkgray;
+    margin-top: 20px;
+}
+
+.tutorial-navbar-element {
+    background-color: #4fb8ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tutorial-navbar-element:hover {
+    background-color: darkcyan;
+    font-weight: 600;
+}
+
+.tutorial-navbar-element.current {
+    background-color: #666;
+    color: #fff;
+}
+
+#top-left-curved {
+    border-top-left-radius: 15px;
+}

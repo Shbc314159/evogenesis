@@ -2,8 +2,11 @@ const button = document.getElementById("taskbarimagebutton");
 const formdiv = document.getElementById("formsdiv");
 const registerform = document.getElementById("register-form");
 const loginform = document.getElementById("login-form");
+const signinpointer = document.getElementById("sign-in-pointer"); 
 
 button.addEventListener("click", () => {
+    signinpointer.style.paddingRight = "90px";
+
     button.style.position = "fixed";
    
     button.animate(
@@ -50,6 +53,7 @@ button.addEventListener("click", () => {
     );
 
     setTimeout(() => {
+        signinpointer.style.paddingLeft = "0";
         button.style.position = 'relative';
         formdiv.style.opacity = 1;
         formdiv.style.zIndex = 1000;

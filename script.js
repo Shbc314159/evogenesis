@@ -13,6 +13,7 @@ const registerform = document.getElementById("register-form")
 const chatbutton = document.getElementById("chatinputbutton");
 const chat = document.getElementById("chatinput");
 const current_uname = document.getElementById("current-username");
+const signinpointer = document.getElementById("sign-in-pointer"); 
 
 
 var currentuseremail; 
@@ -37,6 +38,7 @@ registerButton.addEventListener('click', function() {
 
     signedin = true;
     current_uname.innerHTML = currentuseremail;
+    signinpointer.style.display = "none";
 
 });
 
@@ -62,7 +64,8 @@ loginButton.addEventListener('click', function() {
 
     signedin = true;
     current_uname.innerHTML = currentuseremail;
-    console.log(currentuseremail);
+    signinpointer.style.display = "none";
+
 
 });
 

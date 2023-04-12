@@ -5,22 +5,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee');
 @import url('https://fonts.googleapis.com/css2?family=VT323');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Impact');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed');
 
 body {
     background-color: #303134;
     margin: 0;
 }
 
-#todo-chat-container {
+body::-webkit-scrollbar {
+    width: 0.1em;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.container {
     display: flex;
 }
 
 #todo-list {
-    background-color: #303134;
+    background-color: #1F508F;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     padding: 20px;
-    width: calc(100vw - 300px);
+    width: 300px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#todolisttitle {
+    font-family: Impact;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#todos {
+    font-family: 'Comic Sans MS';
+    list-style-type:circle;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#new-todo-label {
+    font-family: 'Comic Sans MS';
+}
+
+#remove-todo-label {
+    font-family: 'Comic Sans MS';
+}
+
+#new-todo-input {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#new-todo-input:hover {
+    border: 2px solid black;
+}
+
+#new-todo-input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#remove-todo-input {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#remove-todo-input:hover {
+    border: 2px solid black;
+}
+
+#remove-todo-input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#add-todo-button {
+    border-radius: 5px;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 5px;
+    animation: pulse 1s infinite;
+    margin-left: 20px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed';
+}
+
+#add-todo-button:hover {
+    cursor: pointer;
+}
+
+#remove-todo-button {
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    animation: pulse 1s infinite;
+    margin-left: 10px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed';
+}
+
+#remove-todo-button:hover {
+    cursor: pointer;
+}
+
+#main {
+    width: calc(100vw - 600px);
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    padding-top: 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+#container-contact-img {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+}
+
+#contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-decoration: underline
+}
+
+#contact-info p {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#contact-info a {
+    color: #333;
+}
+
+#contact-info a:hover {
+    color: #000;
+}
+
+.icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#logo-div {
+    width: 50%;
+}
+
+#logoimg {
+    width: 55.8%;
 }
 
 #chat {
@@ -28,7 +189,6 @@ body {
     width: 300px;
     padding: 20px;
     color: white;
-    height: calc(100vh - 95px);
 }
 
 #chat-title {

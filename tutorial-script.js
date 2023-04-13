@@ -185,7 +185,7 @@ function PythonOOPTutorial() {
         <br />
         <br />
         <br />
-        This tutorial, although challenging for beginners, is still only the tip
+        This tutorial, although it may be challenging for beginners, is still only the tip
         of the object-oriented iceberg. Inheritance, encapsulation and
         polymorphism are intermediate/advanced features of
         object-oriented-programming and are part of its power. If you have any

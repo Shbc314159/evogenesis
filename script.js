@@ -27,7 +27,7 @@ registerButton.addEventListener('click', function() {
   currentuseremail = email;
   const todoList = [];
   const data = { email: email, todoList: todoList };
-  fetch('http://evogenesis.co.uk/myapp/api/register', {
+  fetch('http://evogenesis.co.uk/newapp/api/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -48,7 +48,7 @@ loginButton.addEventListener('click', function() {
     currentuseremail = email;
     const data = { email: email };
     
-    fetch('http://evogenesis.co.uk/myapp/api/login', {
+    fetch('http://evogenesis.co.uk/newapp/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -94,7 +94,7 @@ addTodoButton.addEventListener('click', function() {
   });
   
   const data = { email: email, todoList: todoListData };
-  fetch('http://evogenesis.co.uk/myapp/api/save', {
+  fetch('http://evogenesis.co.uk/newapp/api/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -120,7 +120,7 @@ removeTodoButton.addEventListener('click', function() {
         });
     
         const data = { email: email, todoList: todoListData };
-        fetch('http://evogenesis.co.uk/myapp/api/save', {
+        fetch('http://evogenesis.co.uk/newapp/api/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
@@ -156,7 +156,7 @@ chatbutton.addEventListener('click', function() {
     const data = { email: currentuseremail, message: currentchat };
 
     if (signedin == true) {
-      fetch('http://evogenesis.co.uk/myapp/api/addmsg', {
+      fetch('http://evogenesis.co.uk/newapp/api/addmsg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -171,7 +171,7 @@ chatbutton.addEventListener('click', function() {
 
 window.onload = function() {
   setInterval(function() {
-    fetch('http://evogenesis.co.uk/myapp/api/getmsgs', {
+    fetch('http://evogenesis.co.uk/newapp/api/getmsgs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     })

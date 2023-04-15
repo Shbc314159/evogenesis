@@ -1,7 +1,43 @@
 const { useState } = React;
 
+const ifastnet_images = [
+  { src: "Media/ifastnet-img-0.png" },
+  { src: "Media/ifastnet-img-1.png" },
+  { src: "Media/ifastnet-img-2.png" },
+  { src: "Media/ifastnet-img-3.png" },
+  { src: "Media/ifastnet-img-4.png" },
+  { src: "Media/ifastnet-img-5.png" },
+];
+
+function Slideshow() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  function goToPrevious() {
+    setCurrentIndex((currentIndex) =>
+      currentIndex === 0 ? ifastnet_images.length - 1 : currentIndex - 1
+    );
+  }
+
+  function goToNext() {
+    setCurrentIndex((currentIndex) =>
+      currentIndex === ifastnet_images.length - 1 ? 0 : currentIndex + 1
+    );
+  }
+
+  return (
+    <div id="ifastnet-slideshow">
+      <p id="current-slide-ifastnet">Slide: {currentIndex+1}</p>
+      <img src={ifastnet_images[currentIndex].src} id="ifastnet-img" />
+      <button onClick={goToPrevious} className="ifastnet-slideshow-buttons" style={{marginLeft: "45%"}}> ◄ </button>
+      <button onClick={goToNext} className="ifastnet-slideshow-buttons"> ► </button>
+    </div>
+  );
+}
+
+
+
 function TutorialContainer() {
-  const [activeTutorial, setActiveTutorial] = useState("python-oop");
+  const [activeTutorial, setActiveTutorial] = useState("ifastnet");
 
   const handleTutorialClick = (tutorial) => {
     setActiveTutorial(tutorial);
@@ -17,7 +53,7 @@ function TutorialContainer() {
           }`}
           onClick={() => handleTutorialClick("ifastnet")}
         >
-          iFastnet Web App Setup
+          Setup your First Website
         </button>
         <button
           className={`tutorial-navbar-element ${
@@ -46,7 +82,77 @@ function TutorialContainer() {
 }
 
 function IfastnetTutorial() {
-  return <p>My ifastnet tutorial</p>;
+  return (
+    <div className="tutorial" id="ifastnet-tutorial">
+      <h1>Setup your First Website Tutorial</h1>
+      <p>
+        The first thing you'll need to do before creating a website is to
+        register a domain name. Personally, I think the easiest option is{" "}
+        <a href="https://domains.google/intl/en-GB/?gclid=CjwKCAjw8-OhBhB5EiwADyoY1cupb5h2ab9VhaQfhNLmT8iRGg3YhgEMrxebeLMqbMbi9J_uOywZ3xoCdLkQAvD_BwE&gclsrc=aw.ds">
+          Google Domains
+        </a>
+        . A domain name is a big feature of your website and is one of the key
+        methods of communicating to your users what your website is about, so
+        choose wisely and try to use a recognisable domain (.co.uk or .com).
+        <br />
+        <br />
+        Next, you'll need to find a hosting provider. This is a company that
+        takes all of your website files and hosts them on a server. Browsers of
+        the web can then access these files, and so the website, anytime. There
+        are many different choices for this (a good free one is{" "}
+        <a href="https://www.infinityfree.net/">InfinityFree</a>).
+        <br />
+        <br />
+        However, for this tutorial we will be focussing on Ifastnet. Whilst not
+        free, it is relatively inexpensive (about £2 per month for the cheapest
+        plan) and gives you access to a comprehensive cPanel. cPanel is
+        essentially a GUI that makes managing your website easier. You probably
+        won't ever use most of its features so don't worry if it looks daunting.
+        <br />
+        <br />
+        Just a side note - I'm not sponsored by Ifastnet at all. It does have
+        drawbacks which I will go over but I genuinely think it is a very good
+        option to build your first website with.
+        <br />
+        <br />
+        Once you've created an ifastnet account, go to the 'My Account' tab and
+        click 'Log in to cPanel' in the 'active products/services section'. Once
+        you create your cPanel account and add login details, you'll be taken to
+        the cPanel itself.
+        <br />
+        <br />
+        Again, most of this you won't need. To start uploading files to their
+        servers and getting your content out to the website, scroll down to the
+        'Files' section and click on 'File Manager'. This will take you to a
+        page similar to the File Explorer in Windows or whatever OS you're
+        using. Again (there's definitely a theme here), most of these
+        directories you won't be using. For now, the only one we're interested
+        in is the public_html directory. Navigate into it by double clicking and
+        the nadd all your website files (iFastnet will automatically display an
+        index.html, index.htm or index.php file so make sure you have one).
+        <br />
+        <br />
+        Now we're pretty much done. The last thing we have to do is to change
+        the nameservers assigned to our domain. The nameservers control where
+        the browser goes to collect the data for the webpage when it is accessed
+        by a user. Ifastnet gives your domain a custom set of nameservers which
+        are emailed to you when you sign up for an account. You will need to
+        access your domain register service and update the nameservers from the
+        default to the one you are given.
+        <br />
+        <br />
+        Now your website is up on the web! A final note about updating the
+        website - after editing the files on your machine you can upload them to
+        the file manager and overwrite the current files (or add new ones).
+        These changes can take a while to take effect due to DNS propagation but
+        you can speed it up by clearing the cache from your browser and
+        reloading the website.
+      </p>
+      <div id="ifastnet-slideshow">
+          <Slideshow />
+      </div>
+    </div>
+  );
 }
 
 function PythonOOPTutorial() {
@@ -185,9 +291,9 @@ function PythonOOPTutorial() {
         <br />
         <br />
         <br />
-        This tutorial, although it may be challenging for beginners, is still only the tip
-        of the object-oriented iceberg. Inheritance, encapsulation and
-        polymorphism are intermediate/advanced features of
+        This tutorial, although it may be challenging for beginners, is still
+        only the tip of the object-oriented iceberg. Inheritance, encapsulation
+        and polymorphism are intermediate/advanced features of
         object-oriented-programming and are part of its power. If you have any
         questions about this tutorial, please send me a message on one of the
         communications media on the main page or in the chat. I don't really

@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 
-app.post('/myapp/api/login', function(req, res) {
+app.post('/newapp/api/login', function(req, res) {
     const email = req.body.email;
     const query = 'SELECT todo_list FROM users WHERE username=?';
     
@@ -41,7 +41,7 @@ app.post('/myapp/api/login', function(req, res) {
 
 
 
-app.post('/myapp/api/register', function(req, res) {
+app.post('/newapp/api/register', function(req, res) {
     const email = req.body.email;
     const todoList = JSON.stringify(req.body.todoList);
     const query = `INSERT INTO users (username, todo_list) VALUES (?, ?)`;
@@ -58,7 +58,7 @@ app.post('/myapp/api/register', function(req, res) {
 });
 
 
-app.post('/myapp/api/save', function(req, res) {
+app.post('/newapp/api/save', function(req, res) {
     const email = req.body.email;
     const todoList = JSON.stringify(req.body.todoList);
     const query = `UPDATE users SET todo_list = ? WHERE username = ?`;
@@ -73,7 +73,7 @@ app.post('/myapp/api/save', function(req, res) {
     });
 });
 
-app.post('/myapp/api/addmsg', function(req) {
+app.post('/newapp/api/addmsg', function(req) {
     const message = req.body.message;
     const email = req.body.email;
     const query = `INSERT INTO messages (username, message) VALUES (?, ?)`
@@ -85,7 +85,7 @@ app.post('/myapp/api/addmsg', function(req) {
     });
 });
 
-app.post('/myapp/api/getmsgs', function(req, res) {
+app.post('/newapp/api/getmsgs', function(req, res) {
     const query =  `SELECT * FROM messages`
 
     connection.query(query, function(error, result) {

@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>EvoGenesis</title>
-    <link rel="icon" href="Media/Icon.ico" type="image/x-icon" /> <link rel="shortcut icon" href="Media/Icon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="Media/Icon.ico" />
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="navbar-stylesheet.css" />
@@ -47,33 +47,11 @@
   </head>
   <body>
     <div id="formsdiv">
-      <div id="register-form" class="form">
-        <h1 class="form-element-h1">Register</h1>
-        <label for="email-input-register" class="form-element-label"
-          >Email:
-          <input
-            type="email"
-            id="email-input-register"
-            class="email-input"
-            name="email-input-register"
-          />
-        </label>
-        <br />
+      <div id="form"> 
+        <h1 id="form-element-h1">Register/Login</h1>
+        <label id="username-label">Username: </label>
+        <input id="email-input"/>
         <button class="form-button" id="register-button">Register</button>
-      </div>
-
-      <div id="login-form" class="form">
-        <h1 class="form-element-h1">Login</h1>
-        <label for="email-input-login" class="form-element-label"
-          >Email:
-          <input
-            type="email"
-            id="email-input-login"
-            class="email-input"
-            name="email-input-login"
-          />
-        </label>
-        <br />
         <button class="form-button" id="login-button">Login</button>
       </div>
     </div>

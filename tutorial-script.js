@@ -65,17 +65,17 @@ function TutorialContainer() {
         </button>
         <button
           className={`tutorial-navbar-element ${
-            activeTutorial === "python-tkinter" ? "current" : ""
+            activeTutorial === "website-creation" ? "current" : ""
           }`}
-          onClick={() => handleTutorialClick("python-tkinter")}
+          onClick={() => handleTutorialClick("website-creation")}
         >
-          Tkinter with Python
+          Website Development History
         </button>
       </div>
       <div id="tutorial-content">
         {activeTutorial === "ifastnet" && <IfastnetTutorial />}
         {activeTutorial === "python-oop" && <PythonOOPTutorial />}
-        {activeTutorial === "python-tkinter" && <TkinterTutorial />}
+        {activeTutorial === "website-creation" && <TkinterTutorial />}
       </div>
     </div>
   );
@@ -306,7 +306,14 @@ function PythonOOPTutorial() {
 }
 
 function TkinterTutorial() {
-  return <p>My python tkinter tutorial</p>;
+  return <p>
+            Currently under development. Here are some quick facts about the website:
+            <ul>
+              <li>About 1800 lines of code not including external libraries</li>
+              <li>44%</li>
+              <li>James is an absolute legend and his youtube channel The Greek Neek</li>
+            </ul>
+          </p>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("react-container"));

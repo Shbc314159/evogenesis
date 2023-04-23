@@ -31,7 +31,7 @@ button.addEventListener("click", () => {
       },
     ],
     {
-      duration: 100,
+      duration: 1000,
     }
   );
 
@@ -47,7 +47,7 @@ button.addEventListener("click", () => {
       },
     ],
     {
-      duration: 100,
+      duration: 1000,
     }
   );
 
@@ -69,11 +69,11 @@ button.addEventListener("click", () => {
         },
       ],
       {
-        duration: 500,
+        duration: 750,
       }
     );
 
     form.style.opacity = 1;
     emailInput.focus()
-  }, 200);
+  }, 1000);
 });

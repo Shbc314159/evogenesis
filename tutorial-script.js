@@ -310,8 +310,8 @@ function TkinterTutorial() {
             Currently under development. Here are some quick facts about the website:
             <ul>
               <li>About 1800 lines of code not including external libraries</li>
-              <li>44%</li>
-              <li>James is an absolute legend and his youtube channel The Greek Neek</li>
+              <li>HTML: 44.8%, Javascript: 31.4%, CSS: 19.3%, PHP: 4.5%</li>
+              <li>Took about 250 hours to create</li>
             </ul>
           </p>;
 }

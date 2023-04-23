@@ -1,0 +1,98 @@
+@media only screen and (orientation: portrait) {
+    #todo-list {
+        grid-row: 2/3;
+        grid-column: 1/1;
+    }
+}
+
+#todo-list {
+    background-color: #1F508F;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 20px;
+    width: 300px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#todolisttitle {
+    font-family: Impact;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#todos {
+    font-family: 'Comic Sans MS';
+    list-style-type:circle;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#new-todo-label {
+    font-family: 'Comic Sans MS';
+}
+
+#remove-todo-label {
+    font-family: 'Comic Sans MS';
+}
+
+#new-todo-input {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#new-todo-input:hover {
+    border: 2px solid black;
+}
+
+#new-todo-input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#remove-todo-input {
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#remove-todo-input:hover {
+    border: 2px solid black;
+}
+
+#remove-todo-input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#add-todo-button {
+    border-radius: 5px;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 5px;
+    animation: pulse 1s infinite;
+    margin-left: 20px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed';
+}
+
+#add-todo-button:hover {
+    cursor: pointer;
+}
+
+#remove-todo-button {
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    animation: pulse 1s infinite;
+    margin-left: 10px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed';
+}
+
+#remove-todo-button:hover {
+    cursor: pointer;
+}

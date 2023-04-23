@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$database = "mydb";
-$password = "";
+$username = "evogenes_shbc";
+$database = "evogenes_Users";
+$password = "mitsMysq27";
 
 $conn = new mysqli($servername, $username, $password, $database);
 

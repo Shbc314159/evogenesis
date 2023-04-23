@@ -30,8 +30,11 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (orientation: portrait) {
     .container {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 30fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "chat"
+            "todolist"
+            "main";
     }
 }
 

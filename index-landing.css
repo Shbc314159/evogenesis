@@ -2,8 +2,9 @@
 
 @media only screen and (orientation: portrait) {
     #main  {
-        grid-row: 3/3;
-        grid-column: 1/1;
+        grid-area: main;
+        margin: 0 !important;
+        width: calc(100% - 42px) !important;
     }
 }
 
@@ -39,7 +40,7 @@
 #contact-info h1 {
     font-size: 24px;
     margin-bottom: 10px;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 #contact-info p {
